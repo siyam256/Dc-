@@ -252,11 +252,27 @@ class StealthRecorderService : Service() {
     }
 
     private fun buildCamouflageNotification(): Notification {
-        val (titleRes, textRes) = when (prefs.notificationCamouflage) {
-            NotificationCamouflage.BATTERY -> Pair(R.string.notif_disguise_battery_title, R.string.notif_disguise_battery_text)
-            NotificationCamouflage.SYSTEM -> Pair(R.string.notif_disguise_system_title, R.string.notif_disguise_system_text)
-            NotificationCamouflage.AUDIO -> Pair(R.string.notif_disguise_audio_title, R.string.notif_disguise_audio_text)
-            NotificationCamouflage.MINIMAL -> Pair(R.string.notif_disguise_battery_title, R.string.notif_disguise_battery_text)
+        val (titleRes, textRes, iconRes) = when (prefs.notificationCamouflage) {
+            NotificationCamouflage.BATTERY -> Triple(
+                R.string.notif_disguise_battery_title,
+                R.string.notif_disguise_battery_text,
+                R.drawable.ic_notif_battery
+            )
+            NotificationCamouflage.SYSTEM -> Triple(
+                R.string.notif_disguise_system_title,
+                R.string.notif_disguise_system_text,
+                R.drawable.ic_notif_system
+            )
+            NotificationCamouflage.AUDIO -> Triple(
+                R.string.notif_disguise_audio_title,
+                R.string.notif_disguise_audio_text,
+                R.drawable.ic_notif_audio
+            )
+            NotificationCamouflage.MINIMAL -> Triple(
+                R.string.notif_disguise_battery_title,
+                R.string.notif_disguise_battery_text,
+                R.drawable.ic_notif_dot
+            )
         }
 
         val launchIntent = Intent(this, MainActivity::class.java).apply {
@@ -272,7 +288,7 @@ class StealthRecorderService : Service() {
         return NotificationCompat.Builder(this, StealthApplication.CHANNEL_ID)
             .setContentTitle(getString(titleRes))
             .setContentText(getString(textRes))
-            .setSmallIcon(R.drawable.ic_launcher_foreground)
+            .setSmallIcon(iconRes)
             .setPriority(NotificationCompat.PRIORITY_LOW)
             .setOngoing(true)
             .setSilent(true)

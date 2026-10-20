@@ -348,7 +348,14 @@ fun SettingsScreen(
                                     .border(1.dp, if (isSelected) CrimsonRed else Color(0xFF262022), RoundedCornerShape(8.dp))
                                     .clickable {
                                         selectedAlias = alias
-                                        DisguiseManager.applyDisguise(context, alias)
+                                        val ok = DisguiseManager.applyDisguise(context, alias)
+                                        if (ok) {
+                                            android.widget.Toast.makeText(
+                                                context,
+                                                "অ্যাপ আইকন ও নাম '$name'-এ পরিবর্তন হয়েছে!",
+                                                android.widget.Toast.LENGTH_SHORT
+                                            ).show()
+                                        }
                                     }
                                     .padding(horizontal = 12.dp, vertical = 10.dp),
                                 verticalAlignment = Alignment.CenterVertically,
@@ -482,7 +489,7 @@ fun SettingsScreen(
                 }
             }
 
-            // 4. Notification Camouflage
+            // 4. Notification Camouflage (Zero Mic Icon)
             item {
                 Card(
                     colors = CardDefaults.cardColors(containerColor = StealthDarkSurface),
@@ -510,13 +517,13 @@ fun SettingsScreen(
                             }
                             Column {
                                 Text(
-                                    text = "নোটিফিকেশন ছদ্মবেশ (Camouflage)",
+                                    text = "নোটিফিকেশন ছদ্মবেশ (মাইক আইকন মুক্ত)",
                                     fontSize = 15.sp,
                                     fontWeight = FontWeight.SemiBold,
                                     color = TextWhite
                                 )
                                 Text(
-                                    text = "রেকর্ডিং চলাকালীন স্ট্যাটাস বারে কি দেখাবে",
+                                    text = "স্ট্যাটাস বারে কোনো মাইক আইকন থাকবে না",
                                     fontSize = 12.sp,
                                     color = TextMuted
                                 )
@@ -526,9 +533,10 @@ fun SettingsScreen(
                         Spacer(modifier = Modifier.height(12.dp))
 
                         val notifOptions = listOf(
-                            Triple(NotificationCamouflage.BATTERY, "Battery Saver Active", "পাওয়ার সেভার স্টাইল"),
-                            Triple(NotificationCamouflage.SYSTEM, "System Health Service", "সিস্টেম প্রসেস স্টাইল"),
-                            Triple(NotificationCamouflage.AUDIO, "Sound Enhancer", "অডিও প্রোফাইল স্টাইল")
+                            Triple(NotificationCamouflage.BATTERY, "Battery Saver Active", "ব্যাটারি আইকন (প্রস্তাবিত)"),
+                            Triple(NotificationCamouflage.SYSTEM, "System Health Service", "সিস্টেম শিল্ড আইকন"),
+                            Triple(NotificationCamouflage.AUDIO, "Sound Enhancer", "সাউন্ড ওয়েভ আইকন"),
+                            Triple(NotificationCamouflage.MINIMAL, "Background Service", "ক্ষুদ্র ডট আইকন")
                         )
 
                         notifOptions.forEach { (option, title, desc) ->
