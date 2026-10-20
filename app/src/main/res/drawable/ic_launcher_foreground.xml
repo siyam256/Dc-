@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Outer Shield Contour -->
+    <path
+        android:fillColor="#1FFF2D40"
+        android:strokeColor="#FF2D40"
+        android:strokeWidth="2.5"
+        android:pathData="M54,26 C68,26 78,32 78,32 C78,54 67,69 54,78 C41,69 30,54 30,32 C30,32 40,26 54,26 Z" />
+
+    <!-- Sleek Microphone Capsule -->
+    <path
+        android:fillColor="#FF2D40"
+        android:pathData="M54,34 C50.5,34 48,36.5 48,40 L48,48 C48,51.5 50.5,54 54,54 C57.5,54 60,51.5 60,48 L60,40 C60,36.5 57.5,34 54,34 Z" />
+
+    <!-- Microphone Arc -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2.2"
+        android:strokeLineCap="round"
+        android:pathData="M44,45 C44,53 50,58 54,58 C58,53 64,53 64,45" />
+
+    <!-- Microphone Stand Stem & Base -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2.2"
+        android:strokeLineCap="round"
+        android:pathData="M54,58 L54,66 M48,66 L60,66" />
+
+    <!-- Audio Stealth Waves (left & right dots/bars) -->
+    <path
+        android:fillColor="#FF2D40"
+        android:pathData="M37,42 L37,46 C37,46.5 36.5,47 36,47 C35.5,47 35,46.5 35,46 L35,42 C35,41.5 35.5,41 36,41 C36.5,41 37,41.5 37,42 Z" />
+    <path
+        android:fillColor="#FF2D40"
+        android:pathData="M73,42 L73,46 C73,46.5 72.5,47 72,47 C71.5,47 71,46.5 71,46 L71,42 C71,41.5 71.5,41 72,41 C72.5,41 73,41.5 73,42 Z" />
+</vector>

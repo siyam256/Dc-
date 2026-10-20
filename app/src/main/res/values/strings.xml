@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Stealth Voice</string>
+    <string name="alias_calc_name">Calculator</string>
+    <string name="alias_notes_name">Notes</string>
+    <string name="alias_clock_name">Clock</string>
+    
+    <string name="accessibility_service_desc">Enables double-tap Volume Up to secretly start recording and double-tap Volume Down to stop recording even when the phone screen is off or locked.</string>
+    
+    <!-- Disguise Notification Titles -->
+    <string name="notif_disguise_battery_title">Battery Saver Active</string>
+    <string name="notif_disguise_battery_text">Optimizing background power consumption</string>
+    <string name="notif_disguise_system_title">System Health Service</string>
+    <string name="notif_disguise_system_text">Background processes running smoothly</string>
+    <string name="notif_disguise_audio_title">Sound Enhancer</string>
+    <string name="notif_disguise_audio_text">Standard audio profile enabled</string>
+</resources>

@@ -1,0 +1,6 @@
+{
+  "name": "Stealth Voice Vault",
+  "description": "সিক্রেট অডিও রেকর্ডার ও এনক্রিপটেড ভল্ট। ভলিউম বাটন দিয়ে ব্যাকগ্রাউন্ড রেকর্ডিং, ডিকয় স্ক্রিন ও পাসওয়ার্ড সিকিউরিটি।",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

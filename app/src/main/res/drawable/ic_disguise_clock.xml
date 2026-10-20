@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#1565C0"
+        android:pathData="M54,14 C31.9,14 14,31.9 14,54 C14,76.1 31.9,94 54,94 C76.1,94 94,76.1 94,54 C94,31.9 76.1,14 54,14 Z" />
+    <path
+        android:fillColor="#0D47A1"
+        android:pathData="M54,20 C35.2,20 20,35.2 20,54 C20,72.8 35.2,88 54,88 C72.8,88 88,72.8 88,54 C88,35.2 72.8,20 54,20 Z" />
+    <!-- Clock Hands -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M51,32h6v24h-6z" />
+    <path
+        android:fillColor="#90CAF9"
+        android:pathData="M51,52h24v6h-24z" />
+    <!-- Center pivot -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,54m-5,0a5,5 0 1,1 10,0a5,5 0 1,1 -10,0" />
+</vector>

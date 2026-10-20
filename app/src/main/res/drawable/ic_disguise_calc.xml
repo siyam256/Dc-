@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#1E2024"
+        android:pathData="M24,20 L84,20 C88.4,20 92,23.6 92,28 L92,80 C92,84.4 88.4,88 84,88 L24,88 C19.6,88 16,84.4 16,80 L16,28 C16,23.6 19.6,20 24,20 Z" />
+    <!-- Display screen -->
+    <path
+        android:fillColor="#343840"
+        android:pathData="M24,28 L84,28 C85.1,28 86,28.9 86,30 L86,42 C86,43.1 85.1,44 84,44 L24,44 C22.9,44 22,43.1 22,42 L22,30 C22,28.9 22.9,28 24,28 Z" />
+    <!-- Buttons row 1 -->
+    <path android:fillColor="#FF5722" android:pathData="M24,50h14v10h-14z" />
+    <path android:fillColor="#4A4E58" android:pathData="M44,50h14v10h-14z" />
+    <path android:fillColor="#4A4E58" android:pathData="M64,50h14v10h-14z" />
+    <!-- Buttons row 2 -->
+    <path android:fillColor="#4A4E58" android:pathData="M24,64h14v10h-14z" />
+    <path android:fillColor="#4A4E58" android:pathData="M44,64h14v10h-14z" />
+    <path android:fillColor="#FF9800" android:pathData="M64,64h14v10h-14z" />
+</vector>
